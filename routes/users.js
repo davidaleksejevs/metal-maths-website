@@ -13,8 +13,20 @@ router.post("/", (req, res) => {
   res.send("user created");
 });
 
-router.get('/"id', (req, res) => {
-  res.send(`Get user with ID ${req.params.id}`);
+router
+  .route("/:id")
+  .get((req, res) => {
+    res.send(`Get user with ID ${req.params.id}`);
+  })
+  .put((req, res) => {
+    res.send(`Get user with ID ${req.params.id}`);
+  })
+  .delete((req, res) => {
+    res.send(`Get user with ID ${req.params.id}`);
+  });
+
+router.param("id", (req, res, next, id) => {
+  console.log(id);
 });
 
 module.exports = router;
