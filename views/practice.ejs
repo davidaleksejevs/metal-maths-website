@@ -35,7 +35,7 @@
               <a class="nav-link active" aria-current="page" href="/">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/users">Link</a>
+              <a class="nav-link disabled" href="/users">Users</a>
             </li>
         </div>
       </div>
@@ -45,8 +45,12 @@
       <div class="bg-light p-5 rounded">
         <h1 class="text-center fs-1">Pmath</h1>
         <p class="text-center fs-1"><%=num1%> X <%=num2%></p>
-        input
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">=</span>
+            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+          </div>
 
+        <div class="d-grid gap-2"><button type="button" class="btn btn-outline-success">input</button></div>
       </div>
     </main>
 
