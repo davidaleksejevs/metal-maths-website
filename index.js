@@ -9,6 +9,11 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
+app.get("/practice", (req, res) => {
+  res.render("practice");
+  console.log("someones going to practice!!!");
+});
+
 const userRouter = require("./routes/users");
 app.use("/users", userRouter);
 
